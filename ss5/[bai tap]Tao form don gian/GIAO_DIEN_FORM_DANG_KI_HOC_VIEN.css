@@ -1,0 +1,19 @@
+fieldset{
+    background-color: khaki;
+    width: 459px;
+    height: 339px;
+}
+h1{
+    background-color: aqua;
+    color: blue;
+}
+label{
+    color: darkblue;
+    margin-left: 70px;
+
+}
+input{
+    margin-left: auto;
+
+}
+

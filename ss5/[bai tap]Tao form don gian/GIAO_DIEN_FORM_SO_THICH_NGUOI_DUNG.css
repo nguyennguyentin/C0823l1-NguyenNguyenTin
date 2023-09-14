@@ -1,0 +1,23 @@
+fieldset {
+    background-color: white;
+    border: 50px solid aqua;
+    width: 418px;
+    height: 277px;
+}
+h1{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+
+}
+label{
+    color: orange;
+}
+label1{
+    color: blue;
+    font-size: 14px;
+    line-height: initial;
+}
+div{
+    text-align: center;
+}

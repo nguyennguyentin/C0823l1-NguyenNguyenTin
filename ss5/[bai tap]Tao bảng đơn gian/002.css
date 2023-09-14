@@ -1,0 +1,38 @@
+body{
+    padding: 50px;
+}
+.div1{
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+    color: darkblue;
+}
+pre{
+    color: darkblue;
+}
+table{ width: 780px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+.th1{
+    background-color: yellow;
+}
+.th2{
+    background-color: orange;
+}
+fieldset{
+    width: 873px;
+    height: 340px;
+    margin-left: 532px;
+    margin-right: 57px;
+}
+pre{
+    margin-left: 180px;
+    margin-right: 79px;
+    font-size: 16px;
+}
