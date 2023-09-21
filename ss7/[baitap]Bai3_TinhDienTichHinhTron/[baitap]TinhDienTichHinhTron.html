@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[baitap]TinhDienTichHinhTron</title>
+</head>
+<body>
+    <div>
+        <h1>TÍNH DIỆN TÍCH HÌNH TRÒN</h1>
+        <label>nhập bán kinh hình tròn: <input type="number" placeholder="bán kình" id="r"> </label>
+        <button class="tính dien tich hình tròn" onclick="tinhS()"   >tính diện tích</button>
+
+    </div>
+<script>
+    function tinhS() {
+        const PI = 3.1415;
+        let R = document.getElementById("r").value;
+        let S = PI * ( R * R );
+        alert("diện tích hình tròn : " + S );
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[baitap]TinhChuViHinhTron</title>
+</head>
+<body>
+<div>
+    <h1>TÍNH CHU VI HÌNH TRÒN</h1>
+    <label>nhập bán kinh hình tròn: <input type="number" placeholder="bán kình" id="r"> </label>
+    <button class="tính chu vi hình tròn" onclick="tinhC()"   >tính chu vi</button>
+
+</div>
+<script>
+    function tinhC() {
+        const PI = 3.1415;
+        let R = document.getElementById("r").value;
+        let C = PI * ( R * 2 );
+        alert("chu vi hình tròn : " + C );
+    }
+</script>
+</body>
+</html>

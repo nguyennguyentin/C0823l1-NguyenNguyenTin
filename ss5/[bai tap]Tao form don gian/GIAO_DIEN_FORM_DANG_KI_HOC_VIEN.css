@@ -6,6 +6,7 @@ fieldset{
 h1{
     background-color: aqua;
     color: blue;
+    text-align: center;
 }
 label{
     color: darkblue;
@@ -14,6 +15,8 @@ label{
 }
 input{
     margin-left: auto;
-
+}
+table{
+    margin: auto;
 }
 

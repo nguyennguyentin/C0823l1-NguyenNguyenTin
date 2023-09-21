@@ -18,6 +18,8 @@ label1{
     font-size: 14px;
     line-height: initial;
 }
-div{
-    text-align: center;
+table{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -9,30 +9,53 @@
     <div>
     <fieldset>
         <h1>ĐĂNG KÍ HỌC VIÊN</h1>
-        <label>Họ và tên : <input type="text" name="fullname"></label>
-        <br>
-        <label>Ngày sinh : <input type="date" name="birthday"></label>
-        <br>
-        <label>
-            Giới tính :
-            <label1><input type="radio" name="sex">nam</label1>
-            <label1><input type="radio" name="sex" >nữ</label1>
-        </label>
-        <br>
-        <label>Địa chỉ : <textarea typeof="text">tổ, phường, quận, thành phố......</textarea> </label>
-        <br>
-        <label>Lớp : <select name="tên lớp" >
-            <option value="">lớp </option>
-        </select></label>
-        <br>
-        <label>Email : <input type="text" name="email"></label>
-        <br>
-        <label>Điện thoại : <input type="tel" name="telephone"></label>
-        <br>
-        <label>
-        <input type="submit" value="đăng ký">
-        <input type="reset" value="nhập lại">
-        </label>
+        <div>
+        <table>
+            <tr>
+                <td>Họ và tên: </td>
+                <td><input type="text" name="fullname" ></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh : </td>
+                <td><input type="date" name="birthday"></td>
+            </tr>
+            <tr>
+                <td>Giới tính : </td>
+                <td>
+                    <label1><input type="radio" name="sex">nam</label1>
+                    <label1><input type="radio" name="sex" >nữ</label1>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ : </td>
+                <td><textarea typeof="text">tổ, phường, quận, thành phố......</textarea></td>
+            </tr>
+            <tr>
+                <td>Lớp : </td>
+                <td>
+                    <select name="tên lớp" >
+                    <option value="">-lớp- </option>
+                    <option value="">lớp 1 </option>
+                    <option value="">lớp 2 </option>
+                    <option value="">lớp 3 </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input type="text" name="email" ></label></td>
+            </tr>
+            <tr>
+                <td>Điện thoại :</td>
+                <td><input type="tel" name="phone number" ></label></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="đăng ký"></td>
+                <td><input type="reset" value="nhập lại"></td>
+            </tr>
+
+        </table>
+        </div>
     </fieldset>
     </div>
 </body>
