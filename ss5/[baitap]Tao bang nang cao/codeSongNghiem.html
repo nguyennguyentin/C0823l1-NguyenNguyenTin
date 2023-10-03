@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch tháng</title>
+    <style>
+        *{
+            /*font-family: "Baskerville Old Face";*/
+        }
+        span.lunar {
+            /*padding-top: 2px;*/
+            font-size: x-small;
+            color: blue;
+            position: relative;
+            bottom: -1px;
+        }
+
+        /*.day {*/
+        /*    position: relative;*/
+        /*}*/
+
+        table.date_table {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Calibri, serif;
+            /*border: 1px solid black;*/
+            border-collapse: collapse;
+        }
+
+        .date_table th, td {
+            border: 1px dashed black;
+            border-collapse: collapse;
+
+        }
+
+        .day:hover {
+            background-color: aquamarine;
+            color: red;
+        }
+
+        .date_vi .Sun_header {
+            color: white;
+        }
+
+        .date_vi th.Sun_header {
+            background-color: red;
+        }
+
+        .date_vi .Sat_header {
+            color: white;
+        }
+
+        .date_vi th.Sat_header {
+            background-color: blue;
+        }
+
+        .date_vi th.normal_day {
+            background-color: orange;
+        }
+
+        .date_en .Sun_header {
+            color: red;
+        }
+
+        .date_en .Sat_header {
+            color: blue;
+        }
+
+        .date_en th, .date_vi th {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center"><label style="font-weight: bolder; font-size: larger; color: blue">THÁNG 9 -
+    SEPTEMBER </label></div>
+
+<table class="date_table">
+    <tr class="date_vi">
+        <th class="Sun_header"><span class="Sun_header"> Chủ nhật</span></th>
+        <th class="normal_day"> Thứ 2</th>
+        <th class="normal_day"> Thứ 3</th>
+        <th class="normal_day"> Thứ 4</th>
+        <th class="normal_day"> Thứ 5</th>
+        <th class="normal_day"> Thứ 6</th>
+        <th class="Sat_header"><span class="Sat_header"> Thứ 7</span></th>
+    </tr>
+
+    <tr class="date_en">
+        <th><span class="Sun_header"> Sun</span></th>
+        <th class="normal_day"> Mon</th>
+        <th class="normal_day"> Tue</th>
+        <th class="normal_day"> Wed</th>
+        <th class="normal_day"> Thu</th>
+        <th class="normal_day"> Fri</th>
+        <th><span class="Sat_header"> Sat</span></th>
+    </tr>
+    <tr>
+        <th class="day"></th>
+        <th class="day"></th>
+        <th class="day"></th>
+        <th class="day"></th>
+        <th class="day"></th>
+
+        <th class="day"> 1<span class="lunar"> 13 </span></th>
+        <th class="day"> 2<span class="lunar"> 14 </span></th>
+
+    </tr>
+    <tr>
+        <th class="day"> 3<span class="lunar"> 15 </span></th>
+        <th class="day"> 4<span class="lunar"> 16 </span></th>
+        <th class="day"> 5<span class="lunar"> 17 </span></th>
+        <th class="day"> 6<span class="lunar"> 18 </span></th>
+        <th class="day"> 7<span class="lunar"> 19 </span></th>
+        <th class="day"> 8<span class="lunar"> 20 </span></th>
+        <th class="day"> 9<span class="lunar"> 21 </span></th>
+
+    </tr>
+    <tr>
+        <th class="day"> 10<span class="lunar"> 22 </span></th>
+        <th class="day"> 11<span class="lunar"> 23 </span></th>
+        <th class="day"> 12<span class="lunar"> 24 </span></th>
+        <th class="day"> 13<span class="lunar"> 25 </span></th>
+        <th class="day"> 14<span class="lunar"> 26 </span></th>
+        <th class="day"> 15<span class="lunar"> 27 </span></th>
+        <th class="day"> 16<span class="lunar"> 28 </span></th>
+    </tr>
+    <tr>
+        <th class="day"> 17<span class="lunar"> 29 </span></th>
+        <th class="day"> 18<span class="lunar"> 30 </span></th>
+        <th class="day"> 19<span class="lunar"> 01 </span></th>
+        <th class="day"> 20<span class="lunar"> 02 </span></th>
+        <th class="day"> 21<span class="lunar"> 03 </span></th>
+        <th class="day"> 22<span class="lunar"> 04 </span></th>
+        <th class="day"> 23<span class="lunar"> 05 </span></th>
+    </tr>
+    <tr>
+        <th class="day"> 24<span class="lunar"> 06 </span></th>
+        <th class="day"> 25<span class="lunar"> 07 </span></th>
+        <th class="day"> 26<span class="lunar"> 08 </span></th>
+        <th class="day"> 27<span class="lunar"> 09 </span></th>
+        <th class="day"> 28<span class="lunar"> 10 </span></th>
+        <th class="day"> 29<span class="lunar"> 11 </span></th>
+        <th class="day"> 30<span class="lunar"> 12 </span></th>
+    </tr>
+</table>
+
+</body>
+</html>

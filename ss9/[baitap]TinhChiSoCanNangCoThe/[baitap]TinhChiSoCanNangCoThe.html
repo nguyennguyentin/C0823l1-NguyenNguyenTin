@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[bài tập]Tính chỉ số cân nặng cơ thể </title>
+</head>
+<body>
+    <div>
+        <h1>Tính Chỉ Số Cân Nặng</h1>
+        <table>
+            <tr>
+                <td>nhập cân nặng : (kg)</td>
+                <td><input type="number" placeholder="cân nặng" id="nang" > </td>
+            </tr>
+            <tr>
+                <td>nhập chiều cao : (m)</td>
+                <td><input type="number" placeholder="chiều cao (vd: 1.75)" id="cao" > </td>
+            </tr>
+        </table>
+        <button class="test" onclick="test()" onkeydown="keypress(event)">kiểm tra!</button>
+        <p id ="result"></p>
+    </div>
+</body>
+</html>
+<script>
+    function test() {
+        let kg = parseFloat(document.getElementById("nang").value);
+        let m = parseFloat(document.getElementById("cao").value);
+        let bmi = kg / (m ^ 2);
+        let result;
+
+        if (bmi < 18)
+            result = document.write("Underweight");
+        else if (bmi < 25.0)
+            result = document.write("Normal");
+        else if (bmi < 30.0)
+            result = document.write("Overweight");
+        else
+            result = document.write("Obese");
+    }
+    function keypress(e){
+        if (e.keyCode==13)
+            test();
+    }
+</script>

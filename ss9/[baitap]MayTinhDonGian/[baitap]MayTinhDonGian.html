@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn giản</title>
+</head>
+<body>
+
+        <input type="text" id="view" > <br><br>
+        <table>
+            <tr>
+                <td> <button type="button" id="1" onclick="nhap(this.value)" value="1">1</button> </td>
+                <td> <button type="button" id="2" onclick="nhap(this.value)" value="2">2</button> </td>
+                <td> <button type="button" id="3" onclick="nhap(this.value)" value="3">3</button> </td>
+                <td> <button type="button" id="*" onclick="nhap(this.value)" value="*">*</button> </td>
+            </tr>
+
+            <tr>
+                <td> <button type="button" id="4" onclick="nhap(this.value)" value="4">4</button> </td>
+                <td> <button type="button" id="5" onclick="nhap(this.value)" value="5">5</button> </td>
+                <td> <button type="button" id="6" onclick="nhap(this.value)" value="6">6</button> </td>
+                <td> <button type="button" id="/" onclick="nhap(this.value)" value="/">/</button> </td>
+            </tr>
+
+            <tr>
+                <td> <button type="button" id="7" onclick="nhap(this.value)" value="7">7</button> </td>
+                <td> <button type="button" id="8" onclick="nhap(this.value)" value="8">8</button> </td>
+                <td> <button type="button" id="9" onclick="nhap(this.value)" value="9">9</button> </td>
+                <td> <button type="button" id="+" onclick="nhap(this.value)" value="+">+</button> </td>
+
+            </tr>
+
+            <tr>
+                <td> <button type="button" id="AC" onclick="AC(this.value)">AC</button> </td>
+                <td> <button type="button" id="0" onclick="nhap(this.value)" value="0">0</button> </td>
+                <td> <button type="button" id="=" onclick="result()tin123z" value="">=</button> </td>
+                <td> <button type="button" id="-" onclick="nhap(this.value)" value="-">-</button> </td>
+            </tr>
+        </table>
+
+</body>
+</html>
+    <style>
+        button{
+            width: 100%;
+        }
+
+    </style>
+    <script>
+        let view = document.getElementById("view");
+
+        function nhap(value){
+            view.value += value;
+
+        }
+        function result(){
+            let result = eval(view.value);
+            view.value=result;
+
+        }
+        function AC(){
+            view.value="";
+
+        }
+        
+
+    </script>

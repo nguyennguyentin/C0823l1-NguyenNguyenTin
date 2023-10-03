@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành] kiểm tra năm nhuận</title>
+</head>
+<body>
+ <div>
+   <h1>KIỂM TRA NĂM NHUẬN</h1>
+   <label>Nhập năm bạn muốn kiểm tra : <input type="number" placeholder="nhặp năm cần kiểm tra" id="kiemtra" onkeydown="keypress(event)" ></label>
+   <button onclick="kiemtranamnhuan()" >kiểm tra !</button>
+   <p id="result"></p>
+ </div>
+</body>
+</html>
+  <script>
+    function kiemtranamnhuan() {
+        let year = +document.getElementById("kiemtra").value;
+        let result;
+
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    result = "result : " + year + " là năm nhuận"
+                } else {
+                    result = "result : " + year + " không là năm nhuận"
+                }
+            } else {
+                result = "result : " + year + " là năm nhuận"
+            }
+        } else {
+            result = "result : " + year + " không là năm nhuận"
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+    //làm thêm cách chạu bằng keypress song song với onclick
+       function keypress(e){
+        if (e.keyCode==13){
+            kiemtranamnhuan();
+        }
+
+       }
+
+
+  </script>
