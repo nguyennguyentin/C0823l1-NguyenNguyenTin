@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<script>
+
+
+  let  ThuongKi = +prompt("nhập điểm kiểm tra thường kì")
+  if(ThuongKi < 0 || ThuongKi > 11) {
+    while ( ThuongKi < 0 ||  ThuongKi > 11) {
+       ThuongKi = +prompt("nhập lại điểm kiểm tra thường kì .lưu ý : nhập trong thang điểm 10")
+    }
+  }
+
+
+  let  GiuaKi = +prompt("nhập điểm kiểm tra giữa kì")
+  if( GiuaKi < 0 ||  GiuaKi > 11 ) {
+    while ( GiuaKi < 0 ||  GiuaKi > 11) {
+       GiuaKi = +prompt("nhập lại điểm kiểm tra Giữa kì .lưu ý : nhập trong thang điểm 10")
+    }
+  }
+
+
+  let  CuoiKi = +prompt("nhập điểm kiểm tra cuối kì")
+  if( CuoiKi < 0 ||  CuoiKi > 11) {
+    while ( CuoiKi < 0 ||  CuoiKi > 11) {
+       CuoiKi = +prompt("nhập lại điểm kiểm tra Cuối kì .lưu ý : nhập trong thang điểm 10")
+    }
+  }
+
+  let tinhdiem = ( ThuongKi +  GiuaKi*2 +  CuoiKi*3) / 3
+  alert(tinhdiem)
+  if(tinhdiem<5)
+      alert("hoc lực kém")
+  else {
+      if(tinhdiem<10){
+          alert("học lự yếu")
+      }else {
+          if(tinhdiem<15){
+              alert("học lực TB")
+          }else {
+              if(tinhdiem<18) {
+                  alert("hoc lực khá")
+              }else {
+                  alert("học lực giỏi")
+              }
+          }
+      }
+  }
+
+</script>
+</body>
+</html>

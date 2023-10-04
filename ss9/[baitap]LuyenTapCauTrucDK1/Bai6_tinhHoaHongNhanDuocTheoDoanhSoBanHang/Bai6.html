@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+<script>
+  let doanhthu = +prompt("doanh thu tháng của nhân viên ")
+  let hoahong
+  if(doanhthu<280){
+    alert("nhân vien ăn lương cứng ko có hoa hồng")
+  }else {
+    if(doanhthu<500){
+      //hoa hồng 1.5%
+      hoahong = doanhthu * 1.5 / 100
+      alert("hoa hồng của doanh thu "+doanhthu+" là : "+hoahong)
+    }else {
+      // trên 500 hoa hồng 3%
+      hoahong = doanhthu * 3 / 100
+      alert("hoa hồng của doanh thu "+doanhthu+" là : "+hoahong)
+    }
+  }
+</script>
+</body>
+</html>

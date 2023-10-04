@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<script>
+    let sophut = +prompt("nhập số phút đã sử dụng")
+    let phi =0
+    const chiphicodinh = 25
+    let tong
+    if(sophut>200){
+        phi=(sophut-200)*200+150*400+50*600
+    }else {
+        if(sophut>50){
+            phi=(sophut-50)*400+50*600;
+        }else {
+            phi=sophut*600
+        }
+    }
+    tong=0.01*phi+chiphicodinh
+    alert("ban đã gọi "+sophut+" phút")
+    alert("tổng tiền bạn phải trả là : "+tong)
+</script>
+</body>
+</html>
