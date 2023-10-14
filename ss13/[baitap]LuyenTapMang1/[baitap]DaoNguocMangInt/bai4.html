@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<h1>Giá trị có trong mảng là : </h1>
+<button type="button" onclick="addNew()">add new !</button>
+<p id="result"></p>
+<b>Mảng đã đảo ngược : <br></b>
+<b id="daonguoc"></b>
+
+
+
+</body>
+</html>
+
+<script>
+  let arr_int = []
+
+  function addNew(){
+    for (i=1;i<11;i++){
+      let int = +prompt("nhập số nguyên thứ "+i+" :")
+      arr_int.push(int)
+    }
+    document.getElementById("result").innerHTML = arr_int.join("<br>")
+
+      //đảo ngược mảng số nguyên
+      // for (x=0;x<arr_int.length/2;x++){
+      //     let t = arr_int[x]
+      //     arr_int[x]=arr_int[arr_int.length-1-x]
+      //     arr_int[arr_int.length-1-x]=t
+      //     console.log(arr_int)
+      // }
+        document.getElementById("daonguoc").innerHTML=arr_int.reverse().join("<br>")
+
+  }
+</script>

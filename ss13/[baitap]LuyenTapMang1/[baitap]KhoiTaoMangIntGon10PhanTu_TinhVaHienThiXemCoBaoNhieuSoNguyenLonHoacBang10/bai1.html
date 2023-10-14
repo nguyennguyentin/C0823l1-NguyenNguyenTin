@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</title>
+</head>
+<body>
+
+<div id="table"></div>
+
+    <button type="button" onclick="addNew()"> add new</button>
+    <script>
+        let arr_int0 = []
+        let lon10=0
+        let bang10=0
+        function addNew(){
+            for(i=1;i<11;i++) {
+                let int = +prompt('nhập số nguyên thứ '+ i + ' vào trong mảng')
+                arr_int0.push(int)
+            }
+            renderRow();
+        }
+
+        function renderRow(){
+
+            let table = '<table border="1">\n' +
+                '        <tr >\n' +
+                '            <td></td>\n' +
+                '            <th>lớn hơn 10</th>\n' +
+                '            <th>bằng 10</th>\n' +
+                '        </tr>\n' ;
+            for(j=0;j<arr_int0.length;j++){
+                table +='<tr>\n' +
+                    '            <td>'+arr_int0[j]+'</td>';
+                if(arr_int0[j]>10){
+                    table +='<td><input type="radio" checked="checked"  name="'+j+'"></td>'
+                    lon10++
+                }else {
+                    table +='<td><input type="radio"  name="'+j+'"></td>'
+                }
+
+                if(arr_int0[j]===10){
+                    table +='<td><input type="radio" checked="checked"  name="'+j+'"></td>'
+                    bang10++
+                }else {
+                    table +='<td><input type="radio"  name="'+j+'"></td>'
+                }
+                table+= '        </tr>';
+            }
+             table += '<tr>' +
+                 '<th>tổng</th>' +
+                 '<td><p id="lonhon10"></p></td>' +
+                 '<td><p id="bangso10"></p></td>' +
+                 '</tr>' +
+                 ' </table>';
+            document.getElementById("table").innerHTML = table;
+            document.getElementById("lonhon10").innerHTML=lon10
+            document.getElementById("bangso10").innerHTML=bang10
+        }
+
+        renderRow();
+        console.log(arr_int0)
+
+    </script>
+</body>
+</html>

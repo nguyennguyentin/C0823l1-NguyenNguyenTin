@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</title>
+</head>
+<body>
+    <h1>Tính diện tích hình chữ nhật</h1>
+    <table>
+         <tr>
+             <th>chiều dài hình chữ nhật : </th>
+             <td><input type="number" id="chieudai" placeholder="( dài )"></td>
+         </tr>
+        <tr>
+            <th>chiều rộng hình chữ nhật : </th>
+            <td><input type="number" id="chieurong" placeholder="( rộng )" onkeydown="keypress(event)"></td>
+        </tr>
+    </table>
+    <button onclick="tinhdientich()" id="tinhS" >tình diên tích !</button>
+    <p id="result"></p>
+</body>
+</html>
+    <script>
+        let D ,R
+        function tinhdientich(){
+            D = +document.getElementById("chieudai").value
+            R = +document.getElementById("chieurong").value
+            let s = D * R
+            document.getElementById("result").innerHTML = "Diện tích hình chữ nhật là : " + s
+        }
+        function keypress(e){
+            console.log(e.keyCode===13)
+            if(e.keyCode===13)
+                tinhdientich()
+        }
+    </script>

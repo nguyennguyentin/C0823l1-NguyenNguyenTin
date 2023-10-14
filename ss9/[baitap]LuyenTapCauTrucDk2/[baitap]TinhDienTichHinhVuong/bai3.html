@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông cạnh a</h1>
+<label>
+    nhập cạnh của hình vuông
+    <input type="number"  id="canha" onkeydown="keypress(event)" placeholder="nhập cạnh a" >
+    <br>
+    <button id="tinhS" onclick="dientich()" >tính diện tích</button>
+    <p id="result"></p>
+</label>
+</body>
+</html>
+    <script>
+        let S
+        let a
+        function dientich() {
+            a = +document.getElementById("canha").value
+            S = a * a
+            console.log(S)
+            document.getElementById("result").innerHTML = "Diện tích hình vuông là : " + S
+        }
+        function keypress(e){
+            console.log(e.keyCode===13)
+            if(e.keyCode===13)
+                dientich()
+        }
+
+    </script>

@@ -26,9 +26,9 @@
     function test() {
         let kg = parseFloat(document.getElementById("nang").value);
         let m = parseFloat(document.getElementById("cao").value);
-        let bmi = kg / (m ^ 2);
+        let bmi = kg / (m * m);
         let result;
-
+        console.log(bmi)
         if (bmi < 18)
             result = document.write("Underweight");
         else if (bmi < 25.0)

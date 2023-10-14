@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<h1>Giá trị có trong mảng là : </h1>
+<button type="button" onclick="addNew()">add new !</button>
+<p id="result"></p>
+<b id="int_max"></b>
+<b id="TB"></b>
+
+
+
+</body>
+</html>
+
+<script>
+    let arr_int = []
+
+    function addNew(){
+        for (i=1;i<11;i++){
+            let int = +prompt("nhập số nguyên thứ "+i+" :")
+            arr_int.push(int)
+        }
+        document.getElementById("result").innerHTML = arr_int.join("<br>")
+
+        // tìm giá trị lớn nhất
+        let max = arr_int[0]
+        index = 0
+        for (j=0;j<arr_int.length;j++){
+            if (max < arr_int[j]){
+                max = arr_int[j]
+                index = i
+            }
+            console.log("max = "+ max )
+        }
+        document.getElementById("int_max").innerHTML = "số nguyên lón nhất là : " + max +"<br>"
+
+        //in ra giá trị tb của các phần tử có trong mảng
+        let tongGT = 0
+        let GTTB =0
+        for (x=0;x<arr_int.length;x++){
+            tongGT += arr_int[x]
+        }
+        GTTB = tongGT / arr_int.length
+        document.getElementById("TB").innerHTML = "giá trị TB của các phần tử trong mảng : "+GTTB
+    }
+</script>

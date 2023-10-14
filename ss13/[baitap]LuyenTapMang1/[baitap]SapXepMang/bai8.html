@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp</title>
+</head>
+<body>
+
+
+<h1>Giá trị có trong mảng là : </h1>
+<button type="button" onclick="addNew()">add new !</button>
+<p id=" result"></p>
+<button type="button" onclick="sapxep()">arrange !</button>
+<p id=" result1"></p>
+
+</body>
+</html>
+<script>
+    let arr_int = []
+
+    function addNew() {
+        for (i = 1; i < 11; i++) {
+            let int = +prompt("nhập số nguyên thứ " + i + " :")
+            arr_int.push(int)
+        }
+        console.log(arr_int.join("-"))
+        document.getElementById("result1").innerHTML = arr_int.join("<br>")
+    }
+
+    //sắp xếp các phần tử theo thứ tự tăng dần
+    function sapxep(){
+        arr_int.sort((a,b)=>a-b)
+        console.log(arr_int.join("-"))
+        //document.getElementById("result1").innerHTML = arr_int.join("<br>")
+    }
+
+</script>

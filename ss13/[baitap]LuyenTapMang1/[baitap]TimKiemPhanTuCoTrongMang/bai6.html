@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</title>
+</head>
+<body>
+<h1>Giá trị có trong mảng là : </h1>
+<button type="button" onclick="addNew()">add new !</button>
+<p id="result"></p>
+<button type="button" onclick="search()">search !</button><br>
+
+
+
+
+</body>
+</html>
+
+<script>
+  let arr_int = []
+
+  function addNew(){
+    for (i=1;i<11;i++){
+      let int = prompt("nhập số nguyên thứ "+i+" :")
+      arr_int.push(int)
+    }
+    document.getElementById("result").innerHTML = arr_int.join("<br>")
+
+  }
+
+  //tìm kiem gia tri có trong mảng
+  function search(){
+      let search = +prompt("nhập giá trị bạn cần tìm ")
+      let found = false
+      for (j=0;j<arr_int.length;j++){
+          if (search===arr_int[j]){
+              found=true
+              let a = j+1
+              alert("giá trị bạn cần tìm nằm ở vị trí "+ a + " trong mảng" )
+          }
+      }
+      if(found){
+          alert("ko có giá rtij cần tìm trong mảng ")
+      }
+  }
+</script>

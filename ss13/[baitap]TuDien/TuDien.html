@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ đền </title>
+</head>
+<body>
+    <script>
+        let string = prompt("nhập từ cần dịch (eng) : ")
+        let arr_eng = ["banana" ,
+        "apple" ,
+        "pen" ,
+        "pencil" ,
+        "book" ,
+        "code"]
+        let arr_vie = ["chuối" ,
+        "táo" ,
+        "bút mực" ,
+        "bút chì" ,
+        "sách" ,
+        "mã" ]
+        let index_eng = 0
+        let result = ""
+        for (i=0;i<arr_eng.length;i++){
+            if(string===arr_eng[i])
+                index_eng=i
+            for(j=0;j<arr_vie.length;j++){
+                if(index_eng===j)
+                    result=arr_vie[j]
+            }
+        }
+        alert(result)
+
+    </script>
+</body>
+</html>

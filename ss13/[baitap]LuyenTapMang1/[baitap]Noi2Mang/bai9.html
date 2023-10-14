@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</title>
+</head>
+<body>
+<h1>Giá trị có trong mảng A là : </h1>
+<button type="button" onclick="addNewA()">add new !</button>
+<p id="resulta"></p>
+
+<h1>Giá trị có trong mảng B là : </h1>
+<button type="button" onclick="addNewB()">add new !</button>
+<p id="resultb"></p>
+
+<h1>Tổng Giá trị có trong 2 mảng là : </h1>
+<button type="button" onclick="arr()">gộp array !</button>
+<p id="resultc"></p>
+</body>
+</html>
+
+<script>
+
+
+    function addNewA(){
+        let arr_a=[]
+        for (i=1;i<11;i++){
+            let inta = prompt("nhập số nguyên thứ "+i+" :")
+            arr_a.push(inta)
+        }
+        console.log(arr_a.join(","))
+        document.getElementById("result").innerHTML = arr_a.join("<br>")
+    }
+
+
+    function addNewB(){
+        let arr_b=[]
+        for (i=1;i<11;i++){
+            let intb = prompt("nhập số nguyên thứ "+i+" :")
+            arr_b.push(intb)
+        }
+        console.log(arr_b.join(","))
+        document.getElementById("result").innerHTML = arr_b.join("<br>")
+
+    }
+    function arr() {
+        let arr = arr_a.concat(arr_b)
+        console.log(arr)
+        document.getElementById("resultc").innerHTML = arr.join("<br>")
+    }
+</script>
