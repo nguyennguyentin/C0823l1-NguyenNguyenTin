@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.</title>
+</head>
+<body>
+<script>
+    const a = ['a','1','2','b','c','3','4','d','e'];
+
+    let count =0;
+
+    for(let i=0; i< a.length; i++){
+        if(!isNaN(a[i])){
+            count++;
+        }
+    }
+    document.write("Mảng [" + a.join(',') + "] <br>");
+    document.write("Có " + count + " kí tự số có trong mảng.");
+</script>
+</body>
+</html>
