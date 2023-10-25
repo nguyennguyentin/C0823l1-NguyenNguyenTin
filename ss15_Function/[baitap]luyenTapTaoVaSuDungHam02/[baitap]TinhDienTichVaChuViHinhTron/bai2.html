@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</title>
+</head>
+<body>
+<h1>tính chu vi diện tịch hình tròn</h1>
+<label>
+    nhập bán kính hình tròn :
+    <input type="number" id="r" placeholder="bán kính r">
+</label>
+<button id="C&S" onclick="chuvivadientich()">tính chu vi và diện tích !</button>
+<b id="result"></b>
+
+
+</body>
+</html>
+    <script>
+
+        const pi = 3.14
+        function chuvivadientich(){
+            let R = document.getElementById("r").value
+            console.log(R)
+            let C = 2*pi*R
+            console.log(C)
+            let S = (C*C)/(4*pi)
+            console.log(S)
+            let result = document.getElementById("result").innerHTML = "<br>"+"chu vi hình tròn là "+C+"<br>"+"diện tích hình tròn là "+S
+        }
+
+    </script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</title>
+</head>
+<body>
+    <script>
+        let thamso1=10
+        let thamso2=20
+        let thamso3=10
+
+        document.write("thamso1=10" +"<br>"+
+            "thamso2=20" +"<br>"+
+            "thamso3=10"+ "<br>")
+        document.write("----------------------------------------------"+"<br>")
+        sosanh(thamso1,thamso2)
+        document.write("----------------------------------------------"+"<br>")
+        sosanh(thamso1,thamso2)
+        document.write("----------------------------------------------"+"<br>")
+        sosanh(thamso1,thamso3)
+
+        function sosanh(a,b){
+            if (a>b){
+                document.write(a+" lớn hơn "+b+"<br>")
+            }else {
+                if(a<b){
+                    let c=a+b
+                    document.write(a+" bé hơn "+b+"<br>")
+                    document.write("tổng 2 giá trị là "+c+"<br>")
+                }else {
+                    let c=a+b
+                    document.write(a+" bằng "+b+"<br>")
+                    document.write("tổng 2 giá trị là "+c+"<br>")
+
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

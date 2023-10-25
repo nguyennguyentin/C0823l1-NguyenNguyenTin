@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let num = +prompt("nhập số bạn cần kiểm tra :")
+        checkprimenumber(num)
+
+
+        function checkprimenumber(number){
+            let count = 0
+            let isprime = false
+            if (num===0){
+                alert("số "+num+" không phải số nguyên tố.")
+
+            }else {
+                for(let i=1 ;i<=num;i++){
+                    if (num%i===0){
+                        count++
+                    }
+                    if (count===2){
+                        isprime=true
+
+                    }
+                    if (isprime=true){
+                        alert("số "+num+" là số nguyên tố.")
+                    }else {
+                        alert("số "+num+" không phải số nguyên tố.")
+                    }
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</title>
+</head>
+<body>
+    <script>
+        let int = +prompt("nhập số muốn tính giai thừa :")
+        alert("giai thừa của "+int+" là : "+giaithua(int))
+
+        function giaithua(a){
+            // đệ quy
+            if(a===0){
+                return 1
+            }else {
+                return a * giaithua(a-1)
+            }
+        }
+    </script>
+</body>
+</html>

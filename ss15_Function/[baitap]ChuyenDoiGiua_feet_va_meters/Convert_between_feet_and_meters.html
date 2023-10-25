@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert between feet and meters</title>
+</head>
+<body>
+    <h1>Chuyển đổi giữa feet và meters</h1>
+    <label>
+        nhập giá trị :
+        <input type="number" id="num"  placeholder="nhập giá trị đổi">
+    </label>
+    <button id="feetToMeter" onclick="Convert_from_feet_to_meters()">feet To Meter !</button>
+    <button id="meterToFeet" onclick="Convert_from_meters_to_feet()">meter To Feet !</button>
+    <b><p id="result"></p></b>
+</body>
+</html>
+    <script>
+        function Convert_from_feet_to_meters(){
+            let meter = document.getElementById("num").value
+            let feet = 3.279 * meter
+            document.getElementById("result").innerHTML = "bằng : "+feet+" feet"
+        }function Convert_from_meters_to_feet(){
+            let feet = document.getElementById("num").value
+            let meter = 0.305 * feet
+            document.getElementById("result").innerHTML = "bằng : "+meter+" meters"
+        }
+    </script>
