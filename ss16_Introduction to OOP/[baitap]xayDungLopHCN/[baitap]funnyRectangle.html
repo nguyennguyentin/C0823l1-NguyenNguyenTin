@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Rectangle</title>
+</head>
+<body>
+    <canvas id="myRectangle" width="1500" height="1000" style="border:1px solid blue "></canvas>
+</body>
+</html>
+
+            <script>
+                class rectangle{
+                    width
+                    height
+                    constructor(width,height) {
+                        this.width=width
+                        this.height=height
+                    }
+
+                    getWidth(){
+                        return this.width
+                    }
+                    getHeight(){
+                        return this.height
+                    }
+                    setWidth(){
+                        this.width=width
+                    }
+                    setHeight(){
+                        this.height=height
+                    }
+                    getArea(){
+                        return this.width*this.height
+                    }
+                    getPerimeter(){
+                        return (this.width+this.height)*2
+                    }
+                }
+
+                let myRectangle =new rectangle( 100 , 50 )
+                let width = myRectangle.width
+                let height = myRectangle.height
+
+
+
+
+                let canvas = document.getElementById("myRectangle")
+                let ctx = canvas.getContext("2d")
+
+
+
+            </script>

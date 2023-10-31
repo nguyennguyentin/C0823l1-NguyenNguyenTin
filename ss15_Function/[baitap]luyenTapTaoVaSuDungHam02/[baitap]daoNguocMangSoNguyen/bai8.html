@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+    <script>
+        let array = []
+        let int
+
+        for(let i=0 ; i<10 ; i++){
+            int = prompt("nhập giá trị thứ "+ (i+1) +" vào mảng số nguyên")
+            array.push(int)
+        }
+        console.log(array)
+        document.write("Mảng số nguyên đã nhập là : "+ array.join(" , ") + "<br>")
+        daonguoc(array)
+
+
+
+        function daonguoc(arr){
+        let  newArray = arr.reverse() 
+        console.log(newArray)
+        document.write("Mảng số nguyen đã đảo ngược là : "+newArray.join(" , "))
+        }
+    </script>
+</body>
+</html>

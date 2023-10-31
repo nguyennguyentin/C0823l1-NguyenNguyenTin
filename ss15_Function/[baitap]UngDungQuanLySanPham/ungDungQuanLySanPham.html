@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phầm</title>
+</head>
+<body>
+    <h1>ứng dụng quản lý sảm phẩm</h1>
+    <div id="addProduct">
+        <h3>Add New product</h3>
+        <label>
+            <input type="text" id="newProduct" placeholder="New Product">
+            <button id="addNew" onclick="addNew()" >Add</button>
+        </label>
+    </div>
+    <div id="displayProduct">
+        <h3>Display All Product</h3>
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th  colspan="3" >Product Name</th>
+                    // đếm số product  có trong list
+                    <th id="countProduct"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Sony Xperia</td>
+                    <td> <button id="btEdit" onclick="edit">Edit !</button> </td>
+                    <td> <button id="btDelete" onclick="del">Delete !</button> </td>
+                </tr>
+
+                <tr>
+                    <td>Samsung Galaxy</td>
+                    <td> <button id="btEdit" onclick="edit">Edit !</button> </td>
+                    <td> <button id="btDelete" onclick="del">Delete !</button> </td>
+                </tr>
+
+                <tr>
+                    <td>Nokia</td>
+                    <td> <button id="btEdit" onclick="edit">Edit !</button> </td>
+                    <td> <button id="btDelete" onclick="del">Delete !</button> </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+    <script>
+        let array = ["Sony Xperia" , "Samsung Galaxy" , "Nokia"]
+        let count = array.length
+
+        function addNew(){
+            let newValue = document.getElementById("newProduct").value
+            array.push(newValue)
+        }
+    </script>

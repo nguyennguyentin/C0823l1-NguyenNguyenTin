@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</title>
+</head>
+<body>
+   <p id="resultInt1"></p>
+   <p id="resultInt2"></p>
+   <b id="result"></b>
+
+
+
+
+  <script>
+    let int1 = +prompt("nhập vào số nguyên thứ nhất :")
+    document.getElementById("resultInt1").innerHTML = "số nguyên thứ nhất là : "+int1
+    let int2 = +prompt("nhập vào số nguyên thứ hai :")
+    document.getElementById("resultInt2").innerHTML = "số nguyên thứ hai là : "+int2
+
+    document.getElementById("result").innerHTML = "đổi chỗ 2 số nguyên : "+ doicho(int1,int2)
+
+    function doicho(a,b){
+      let c = a
+      a = b
+      b = c
+      return a +"  , "+b
+    }
+
+  </script>
+</body>
+</html>

@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</title>
 </head>
 <body>
+    <script>
+        let int = +prompt("nhập số nguyên bạn muốn kiểm tra : ")
+        checkInt(int)
 
+        function checkInt(a){
+            return a>0
+                ? alert(a + " là số nguyên dương ")
+                : alert(a + " không phải số nguyên dương")
+        }
+    </script>
 </body>
 </html>

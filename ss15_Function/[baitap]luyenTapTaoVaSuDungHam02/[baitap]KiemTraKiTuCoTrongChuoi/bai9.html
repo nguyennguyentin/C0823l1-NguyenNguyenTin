@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.</title>
+</head>
+<body>
+    <script>
+        let chuoi = prompt("nhập vào chuỗi kí tự")
+        document.write("chuỗi kí tự"+chuoi+"<br>")
+        checkChuoi(chuoi)
+
+        function checkChuoi(characterString){
+            let char = prompt("nhập kí tự mà bạn tìm kiếm trong chuỗi ")
+            document.write("kí tự cần kiểm tra là : "+char+"<br>")
+            let  count=0
+            let check = characterString.indexOf(char)
+            if (check !== -1) {
+                for (let i = 0; i < characterString.length; i++) {
+                    if (char === characterString[i]){
+                        count++
+                    }
+                }
+                document.write("<b>"+"kí tự xuất hiện "+count+" lần trong chuỗi"+"</b>"+"<br>")
+            }else {
+                document.write("<b>"+"không tìm thấy kí tự trong chuỗi"+"</b>")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân và lương ròng </title>
+</head>
+<body>
+        <script>
+            let luong = +prompt("nhập lương của bạn (vnd)")
+            let luongrong = 0
+            let thuethunhapcanhan=0
+            if (luong<7000000){
+                thuethunhapcanhan = (luong * 5)/100
+                luongrong = luong - thuethunhapcanhan
+                alert("thuế thu nập cá nhân của bạn là 5% => "+thuethunhapcanhan+" vnd")
+                alert("lương ròng của bạn là "+luongrong+" vnd")
+            }else {
+                if (luong<15000000) {
+                    thuethunhapcanhan = (luong * 10)/100
+                    luongrong = luong - thuethunhapcanhan
+                    alert("thuế thu nập cá nhân của bạn là 10% => "+thuethunhapcanhan+" vnd")
+                    alert("lương ròng của bạn là "+luongrong+" vnd")
+                }else {
+                    thuethunhapcanhan = (luong * 20)/100
+                    luongrong = luong - thuethunhapcanhan
+                    alert("thuế thu nập cá nhân của bạn là 20% => "+thuethunhapcanhan+" vnd")
+                    alert("lương ròng của bạn là "+luongrong+" vnd")
+                }
+            }
+        </script>
+</body>
+</html>

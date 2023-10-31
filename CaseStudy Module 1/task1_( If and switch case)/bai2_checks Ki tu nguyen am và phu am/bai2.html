@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nguyên âm và phụ âm</title>
+</head>
+<body>
+<script>
+    let Char = prompt("Nhập vào 1 ký tự tiếng Anh bất kỳ : ");
+    if (isVowel(Char)) {
+        alert("Đây là một nguyên âm");
+    } else alert("Đây không phải là một nguyên âm ");
+
+    function isVowel(Char) {
+        const vowels = ["o", "u", "i", "a", "e", "O", "U", "I", "A", "E"];
+        return vowels.includes(Char);
+    }
+</script>
+</body>
+</html>
