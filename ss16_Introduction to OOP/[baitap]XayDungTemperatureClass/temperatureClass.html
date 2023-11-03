@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xấy dựng Temperature Class</title>
+</head>
+<body>
+        <script>
+                class temperature{
+                    Celsius
+                    constructor(Celsius) {
+                        this.Celsius = Celsius
+                    }
+                    Fahrenheit(){
+                        return 9/5 * this.Celsius +32
+                    }
+                    Kenvil(){
+                        return this.Celsius + 273.15
+                    }
+                }
+                 let nhiet = 25
+                 let nhietdo = new temperature(nhiet)
+                 let myFahrenheit = nhietdo.Fahrenheit()
+                 let myKenvil = nhietdo.Kenvil()
+
+                document.write(nhiet + " độ C = "+myFahrenheit+" độ F = "+myKenvil+" độ K")
+        </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Class</title>
+</head>
+<body>
+<script>
+    const phones = [];
+    class Message {
+        constructor(contact = "", text = "") {
+            this.contact = contact;
+            this.text = text;
+        }
+    }
+    class Mobile {
+        constructor(
+            phoneNumber = "",
+            battery = 100,
+            draftMess = [],
+            inboxMess = [],
+            sentMess = [],
+            isOn = true,
+            isCharging = false
+        ) {
+            this.phoneNumber = phoneNumber;
+            this.battery = battery;
+            this.draftMess = draftMess;
+            this.inboxMess = inboxMess;
+            this.sentMess = sentMess;
+            this.isOn = isOn;
+            this.isCharging = isCharging;
+        }
+        powerOn() {
+            this.isOn = true;
+        }
+        powerOff() {
+            this.isOn = false;
+        }
+        getStatus() {
+            return this.isOn;
+        }
+        charge() {
+            this.battery = 100;
+        }
+        writingMessage(message) {
+            if (this.isOn) {
+                this.draftMess.push(message);
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        receiveMessage(message) {
+            if (this.isOn) {
+                this.inboxMess.unshift(message);
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        sendMessage(message) {
+            if (this.isOn) {
+                const contact = phones.filter((phone) => {
+                    return phone.phoneNumber === message.contact;
+                });
+                const sentMess = {
+                    contact: this.phoneNumber,
+                    text: message.text,
+                };
+                contact[0].receiveMessage(sentMess);
+                this.sentMess.unshift(message);
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        showDraft() {
+            if (this.isOn) {
+                document.writeln("DRAFTS  : </br>");
+                this.draftMess.forEach((message, index) => {
+                    document.writeln(`Draft Message No : ${index + 1} </br>`);
+                    document.writeln(`Contact : ${message.contact} </br>`);
+                    document.writeln(`Message : ${message.text} </br>`);
+                });
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        showInbox() {
+            if (this.isOn) {
+                document.writeln("INBOX  : </br>");
+                this.inboxMess.forEach((message, index) => {
+                    document.writeln(`Message No : ${index + 1} </br>`);
+                    document.writeln(`Contact : ${message.contact} </br>`);
+                    document.writeln(`Message : ${message.text} </br>`);
+                });
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        showSentbox() {
+            if (this.isOn) {
+                document.writeln("SENT  : </br>");
+                this.sentMess.forEach((message, index) => {
+                    document.writeln(`Message No : ${index + 1} </br>`);
+                    document.writeln(`Contact : ${message.contact} </br>`);
+                    document.writeln(`Message : ${message.text} </br>`);
+                });
+                this.decreaseBatt();
+            } else alert("The phone is off !");
+        }
+        decreaseBatt() {
+            this.battery = this.battery - 1;
+        }
+    }
+
+    let nokia = new Mobile("0935143868");
+    let iphone = new Mobile("090511111");
+    phones.push(nokia);
+    phones.push(iphone);
+
+    const mess = new Message("090511111", "Hello");
+
+    nokia.sendMessage(mess);
+    nokia.showSentbox();
+</script>
+</body>
+</html>

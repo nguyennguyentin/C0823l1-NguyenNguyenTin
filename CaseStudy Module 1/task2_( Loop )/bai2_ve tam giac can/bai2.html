@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Tam Giác Cân</title>
+</head>
+<body>
+        <script>
+            // Nhập vào chiều cao của tam giác
+            var n = prompt("Nhập vào chiều cao của tam giác: ");
+            // Chuyển đổi từ chuỗi sang số nguyên
+            n = parseInt(n);
+            // Vẽ tam giác cân
+            for (var i = 1; i <= n; i++) {
+                // Khởi tạo một biến để lưu trữ ký tự của mỗi hàng
+                var line = "";
+                for (var j = 1; j <= n - i; j++) {
+                    // In ra khoảng trắng ở bên trái của tam giác
+                    line += " ";
+                }
+                for (var j = 1; j <= 2 * i - 1; j++) {
+                    // In ra ký tự * ở các cạnh và đỉnh của tam giác
+                    line += "*";
+                }
+                // In ra mỗi hàng của tam giác
+                console.log(line);
+            }
+
+        </script>
+</body>
+</html>

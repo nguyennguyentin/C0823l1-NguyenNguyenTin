@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A</title>
+</head>
+<body>
+        <script>
+            let arrA = [1,24,1,123,12,4,4,23,5,23,5,23242,342,35]
+            let arrB = [1,24,1,123,12,4,909,799,9880,988]
+            console.log("arrA = ["+arrA+"]")
+            console.log("arrB = ["+arrB+"]")
+            let arr_khac = []
+            for (const char of arrB){
+                if (!arrA.includes(char)){
+                    arr_khac.push(char)
+                }
+            }
+            console.log(arr_khac)
+            console.log("kí tự có trong arrB mà ko có trong arrA là : "+arr_khac)
+        </script>
+</body>
+</html>

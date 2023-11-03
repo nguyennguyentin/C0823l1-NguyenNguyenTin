@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            let arr_a =[1,2,3,4,5,6,7,10,8,9,20]
+            let arr_b = []
+            let count = 0
+            console.log(arr_a)
+            for (let i=0 ; i<arr_a.length ; i++){
+                if (i===0){
+                    b = arr_a[i]
+                }else {
+                    b = arr_b[i-1] + arr_a[i]
+                }
+                arr_b.push(b)
+            }
+
+            console.log(arr_b)
+        </script>
+</body>
+</html>
