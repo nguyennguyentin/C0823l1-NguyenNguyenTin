@@ -6,7 +6,27 @@
 </head>
 <body>
         <script>
+            function maxFraction(numerators, denominators) {
+                let maxFractionValue = -1;  // Khởi tạo giá trị lớn nhất là -1
+                let maxFractionIndex = -1;  // Khởi tạo chỉ số của phân số lớn nhất là -1
+
+                for (let i = 0; i < numerators.length; i++) {
+                    const fractionValue = numerators[i] / denominators[i];  // Tính giá trị của phân số tại vị trí i
+
+                    if (fractionValue > maxFractionValue) {
+                        maxFractionValue = fractionValue;  // Cập nhật giá trị lớn nhất nếu tìm thấy phân số lớn hơn
+                        maxFractionIndex = i;  // Cập nhật chỉ số của phân số lớn nhất
+                    }
+                }
+
+                return maxFractionIndex;
+            }
             
+            let numerators = [5, 2, 5];
+            let denominators = [6, 3, 4];
+            let result = maxFraction(numerators, denominators);
+            console.log("Chỉ số của phân số lớn nhất là: " + result);
+
         </script>
 </body>
 </html>
