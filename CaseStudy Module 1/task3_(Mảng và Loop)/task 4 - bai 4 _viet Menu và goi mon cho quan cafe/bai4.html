@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu goi mon </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div id="display"></div>
+    </div>
+</body>
+</html>
+
+    <script>
+        class mon{
+            constructor(id, name, value) {
+                this.id = id;
+                this.name = name;
+                this.value = value;
+            }
+                getId() {
+                    return this.id;
+                }
+                setId(id) {
+                    this.id=id;
+                }
+
+                getName() {
+                    return this.name;
+                }
+                setName(name) {
+                    this.name=name;
+                }
+
+                getValue() {
+                    return this.value;
+                }
+                setValue(value)  {
+                    this.value=value;
+                }
+
+
+        }
+        let cafe = new mon(1 , "coffee" , 20000);
+        let cam = new mon(2 , "cam vắt" , 25000);
+        let ncCaRot = new mon(3 , "nước ép cà rốt" , 30000);
+        let ncCaChua = new mon(4 , "nước ép cà chua" , 30000);
+        let ncloc = new mon(5 , "nước lọc" , 10000);
+        let ncDua = new mon(6 , "nước dừa" , 25000);
+
+        let menu = [];
+        menu.push(cafe);
+        menu.push(cam);
+        menu.push(ncCaRot);
+        menu.push(ncCaChua);
+        menu.push(ncloc);
+        menu.push(ncDua);
+            console.log(menu);
+
+        function displayMenu(){
+            let menudata = '<table border="1" class="table">\n' +
+                '                <thead>\n' +
+                '                    <tr>\n' +
+                '                        <th style="text-align: center" colspan="4" >\n' +
+                '                            <h3>HELLO Coffee</h3>\n' +
+                '                        </th>\n' +
+                '                    </tr>\n' +
+                '                    <tr>\n' +
+                '                        <th>Id</th>\n' +
+                '                        <th>Name</th>\n' +
+                '                        <th>Value</th>\n' +
+                '                        <th></th>\n' +
+                '                    </tr>\n' +
+                '                </thead>\n' +
+                '                <tbody>\n' ;
+                for (let i=0 ; i<menu.length ; i++ ) {
+                    const mon = menu[i];
+                    menudata += '            <tr>\n' +
+                        '                        <td>$(mon.getId())</td>\n' +
+                        '                        <td>$(mon.getName())</td>\n' +
+                        '                        <td>$(mon.getValue())</td>\n' +
+                        '                        <td>\n' +
+                        '                            <button onclick="tru()">-</button>\n' +
+                        '                        </td>\n' +
+                        '                        <td>\n' +
+                        '                            <input type="number" id="quantity" >\n' +
+                        '                        </td>\n' +
+                        '                        <td>\n' +
+                        '                            <button onclick="cong()">+</button>\n' +
+                        '                        </td>\n' +
+                        '                    </tr>\n' ;
+                        menudata +='     </tbody>\n' +
+                        '            </table>';
+                }
+        }
+
+
+    </script>
