@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuẩn hóa chuỗi</title>
+</head>
+<body>
+    <script>
+        let a = prompt("nhap chuoi cua ban");
+        nomal(a);
+        function nomal(string){
+            let arr = string.split(" ");
+            let kq = "" ;
+            let tmp;
+            for (let i=0 ; i<arr.length ; i++){
+                tmp = arr[i].trim().toLowerCase();
+                if (tmp != ""){
+                    tmp = tmp.substring(0,1).toUpperCase() + tmp.substring(1);
+                    kq += tmp +" ";
+                }
+            }
+            alert(kq)
+        }
+    </script>
+</body>
+</html>
