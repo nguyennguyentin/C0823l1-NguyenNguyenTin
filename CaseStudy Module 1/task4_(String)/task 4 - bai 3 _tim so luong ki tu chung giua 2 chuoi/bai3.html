@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tim so luong ki tu chung giua hai chuoi</title>
 </head>
 <body>
 
 </body>
 </html>
+
+
+        <script>
+            let s1 = `aabcc`;
+            let s2 = `adcaa`;
+            document.write("s1 = aabcc" + "<br>")
+            document.write("s2 = adcaa`" + "<br>")
+            document.write("số kí tự chung là "+commonCharacterCount(s1,s2) + "<br>")
+
+
+            function commonCharacterCount(s1, s2) {
+                const count = {};
+
+                // Đếm số lần xuất hiện của từng ký tự trong s1
+                for (let char of s1) {
+                    count[char] = (count[char] || 0) + 1;
+                }
+
+                // Tăng số lần xuất hiện của từng ký tự trong s2
+                // Nếu ký tự đã được đếm trong s1, giảm số lần xuất hiện trong count
+                let commonCount = 0;
+                for (let char of s2) {
+                    if (count[char]) {
+                        commonCount++;
+                        count[char]--;
+                    }
+                }
+                console.log(commonCount)
+                return commonCount;
+            }
+
+
+        </script>
