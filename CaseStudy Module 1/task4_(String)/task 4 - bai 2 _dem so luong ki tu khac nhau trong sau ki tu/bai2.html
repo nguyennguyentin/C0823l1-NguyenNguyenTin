@@ -5,6 +5,32 @@
     <title>dem so luong ki tu khac nhau</title>
 </head>
 <body>
+        <script>
+            let str = prompt("nhập chuỗi");
+            console.log(str)
+            let kq = demKyTuKhacNhau(str);
+            console.log("Số lượng ký tự khác nhau trong chuỗi là: " + kq);
+            function demKyTuKhacNhau(chuoi) {
+                let kyTuKhacNhau = {};
 
+                // Duyệt qua từng ký tự trong chuỗi
+                for (let i = 0; i < chuoi.length; i++) {
+                    let kyTu = chuoi[i];
+
+                    // Nếu ký tự chưa được đếm, thêm vào đối tượng kyTuKhacNhau
+                    if (!kyTuKhacNhau[kyTu]) {
+                        kyTuKhacNhau[kyTu] = 1;
+                    } else {
+                        kyTuKhacNhau[kyTu]++;
+                    }
+                }
+
+                // Đếm số lượng ký tự khác nhau
+                let soLuongKyTuKhacNhau = Object.keys(kyTuKhacNhau).length;
+                return soLuongKyTuKhacNhau;
+            }
+
+
+        </script>
 </body>
 </html>
